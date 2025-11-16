@@ -1,0 +1,6 @@
+{
+  "scope": "x_1603915_airspeed",
+  "scopeId": "3079a2fcc3113210e3651212b401313d",
+  "name": "Airspeed Fli",
+  "tsconfigPath": "./src/server/tsconfig.json"
+}

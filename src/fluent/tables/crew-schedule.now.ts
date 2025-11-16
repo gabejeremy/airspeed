@@ -40,16 +40,19 @@ export const x_1603915_airspeed_crew_schedule = Table({
             label: 'Manager Approval',
             referenceTable: 'sysapproval_approver'
         }),
-        status: ChoiceColumn({
-            label: 'Status',
-            choices: {
-                availability_submitted: { label: 'Availability Submitted', sequence: 0 },
-                draft_schedule: { label: 'Draft Schedule', sequence: 1 },
-                approved_schedule: { label: 'Approved Schedule', sequence: 2 },
-                conflict: { label: 'Conflict', sequence: 3 },
-                rejected: { label: 'Rejected', sequence: 4 },
-                closed: { label: 'Closed', sequence: 5 }
-            }
-        })
+        start_date: StringColumn({
+            label: 'Schedule Start Date',
+            maxLength: 40
+        }),
+        end_date: StringColumn({
+            label: 'Schedule End Date',
+            maxLength: 40
+        }),
+        availability_notes: StringColumn({
+            label: 'Availability Notes',
+            maxLength: 4000
+        }),
+        // Note: 'state' field is inherited from task table and configured with custom choices
+        // State values: availability_submitted, draft_schedule, approved_schedule, rejected, closed
     }
 })
